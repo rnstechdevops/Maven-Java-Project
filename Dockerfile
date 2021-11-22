@@ -9,7 +9,7 @@ RUN java -version
 #RUN mkdir /opt/tomcat/
 
 WORKDIR /opt
-RUN curl -O  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz 
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz 
 RUN sudo tar xzvf apache-tomcat-9.0.55.tar.gz -C /opt/   
 RUN sudo cp -R /opt/apache-tomcat-9.0.55/ /opt/tomcat
 
