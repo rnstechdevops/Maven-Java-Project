@@ -9,7 +9,7 @@ RUN java -version
 #RUN mkdir /opt/tomcat/
 
 WORKDIR /opt
-RUN curl -O http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
+RUN curl -O  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz //http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
 RUN tar xzvf apache-tomcat-8.5.58.tar.gz -C /opt/
 RUN cp -R /opt/apache-tomcat-8.5.58/ /opt/tomcat
 
