@@ -1,12 +1,12 @@
 def ansible = [:]
          ansible.name = 'ansible'
-         ansible.host = '172.31.22.197'
+         ansible.host = '172.31.88.74'
          ansible.user = 'centos'
          ansible.password = 'Rnstech@123'
          ansible.allowAnyHosts = true
 def kops = [:]
          kops.name = 'kops'
-         kops.host = '172.31.19.125'
+         kops.host = '172.31.22.79'
          kops.user = 'centos'
          kops.password = 'Rnstech@123'
          kops.allowAnyHosts = true
