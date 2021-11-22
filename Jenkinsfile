@@ -81,7 +81,7 @@ pipeline {
       stage('Build Docker Image') {
          
          steps{
-                  sh "docker build -t vamsitiruvuri4/webapp ."  
+                  sh "docker build -t vamsitiruvuri4/webapp30 ."  
          }
       }
       stage('Publish Docker Image') {
@@ -91,7 +91,7 @@ pipeline {
     	      withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
     		    sh "docker login -u ${dockerUser} -p ${dockerPassword}"
 	      }
-        	sh "docker push vamsitiruvuri4/webapp"
+        	sh "docker push vamsitiruvuri4/webapp30"
          }
      }
      stage('Deploy to Staging') {
