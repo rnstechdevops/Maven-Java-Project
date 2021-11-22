@@ -83,7 +83,16 @@ pipeline {
          steps{
                   sh "docker build -t vamsitiruvuri4/webapp ."  
          }
-     }
-	
+      }
+      stage('Publish Docker Image') {
+         
+          steps{
+
+    	      withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
+    		    sh "docker login -u ${dockerUser} -p ${dockerPassword}"
+	      }
+        	sh "docker push vamsitiruvuri4/webapp"
+         }
+    }
     }
 }
