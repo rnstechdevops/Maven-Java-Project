@@ -67,6 +67,17 @@ pipeline {
               }
           }
       }
-
+       stage('Build Code') {
+        
+          steps{
+	      unstash 'Source'
+              sh "mvn clean package"  
+          }
+          post{
+              success{
+                  archiveArtifacts '**/*.war'
+              }
+          }
+      }
     }
 }
