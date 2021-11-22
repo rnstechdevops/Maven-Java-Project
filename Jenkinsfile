@@ -45,16 +45,15 @@ pipeline {
 	 
 	 stage('SonarQube analysis') {
          
-          steps{
+           steps{
                 echo "Sonar Scanner"
                   sh "mvn clean compile"
-               withSonarQubeEnv(credentialsId: 'sonarqube') {
-    			// some block
+                withSonarQubeEnv(credentialsId: 'sonarqube') {
 		      sh "mvn sonar:sonar "
 		       
-	       }                     
-          }
-      }    
+	        }                     
+            }
+          }    
 	
 
     }
