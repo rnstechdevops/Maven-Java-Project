@@ -91,7 +91,7 @@ pipeline {
     	      withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
     		    sh "docker login -u ${dockerUser} -p ${dockerPassword}"
 	      }
-        	sh "docker push vamsitiruvuri4/webapp30:latest"
+        	sh "docker push vamsitiruvuri4/webapp30:latest1"
          }
      }
      stage('Deploy to Staging') {
