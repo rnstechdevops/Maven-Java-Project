@@ -81,7 +81,7 @@ pipeline {
       stage('Build Docker Image') {
          
          steps{
-                  sh "docker build -t vamsitiruvuri4/webapp30 ."  
+                  sh "docker build -t vamsitiruvuri4/webapp30:v1 ."  
          }
       }
       stage('Publish Docker Image') {
